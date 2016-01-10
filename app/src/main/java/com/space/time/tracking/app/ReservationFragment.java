@@ -27,16 +27,10 @@ import java.util.ArrayList;
 public class ReservationFragment extends Fragment {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setRetainInstance(true);
-        startNewAsyncTask();
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parentViewGroup,
                              Bundle savedInstanceState) {
+        setRetainInstance(true);
+        startNewAsyncTask();
 
         View rootView = inflater.inflate(R.layout.reservation_container, parentViewGroup, false);
         return rootView;

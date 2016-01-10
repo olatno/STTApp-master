@@ -3,7 +3,7 @@ package com.space.time.android.tracker.bean;
 /**
  * Created by olatu on 05/01/2016.
  */
-public class ReservationArrival extends Reservation{
+public class ReservationArrival {
 
     String name;
     String arriDate;
