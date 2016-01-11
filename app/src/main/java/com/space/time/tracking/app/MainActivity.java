@@ -5,17 +5,20 @@ import android.app.Fragment;
 import 	android.app.FragmentManager;
 import 	android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     Fragment fragment;
+    Fragment fragmentMain;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentManager fragmentManager = getFragmentManager();
         if (savedInstanceState == null) {
+            FragmentManager fragmentManager = getFragmentManager();
+
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragment = new ReservationFragment();
             fragmentTransaction.add(R.id.fragmentParentViewGroup, fragment);

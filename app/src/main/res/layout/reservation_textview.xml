@@ -6,22 +6,22 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="Customer Name"
             android:id="@+id/textView_name" />
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="Package"
             android:id="@+id/textView_package" android:layout_toRightOf="@+id/textView_name"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="Arrival Date"
             android:id="@+id/textView_arrival" android:layout_below="@+id/textView_name"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="Number"
             android:id="@+id/textView_number" android:layout_below="@+id/textView_package"
             android:layout_toRightOf="@+id/textView_name"/>
 </RelativeLayout>

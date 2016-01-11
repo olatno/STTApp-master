@@ -46,8 +46,8 @@ public class ReservationFragment extends Fragment {
 
         private WeakReference<ReservationFragment> fragmentWeakRef;
         ProgressDialog pd;
-        final String url = "http://192.168.1.3:8080/tracker/json/reservation/all";
-        //final String url = "http://192.168.177.122:8080/tracker/json/reservation/all";
+        //final String url = "http://192.168.1.3:8080/tracker/json/reservation/all";
+        final String url = "http://192.168.177.187:8080/tracker/json/reservation/all";
 
         private ReservationAsyncTask(ReservationFragment reservationFragment) {
 
