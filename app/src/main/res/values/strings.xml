@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">STTApp</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Space Time Tracker App</string>
+    <string name="landing_page">SPACE TIME TRACKER</string>
+    <string name="action_reservations">Reservations</string>
+    <string name="action_arrivals">Arrivals</string>
+    <string name="action_departures">Departures</string>
+    <string name="action_tracker">Tracker</string>
 </resources>

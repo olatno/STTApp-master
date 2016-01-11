@@ -7,5 +7,6 @@
     <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/listView_reservation"/>
+            android:id="@+id/listView_reservation" android:background="#010101" android:divider="@android:color/white"
+            android:dividerHeight="@dimen/abc_edit_text_inset_horizontal_material"/>
 </LinearLayout>

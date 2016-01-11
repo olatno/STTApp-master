@@ -10,8 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-    Fragment fragment;
-    Fragment fragmentMain;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getFragmentManager();
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragment = new ReservationFragment();
+            MainActivityFragment fragment = new MainActivityFragment();
             fragmentTransaction.add(R.id.fragmentParentViewGroup, fragment);
             fragmentTransaction.commit();
         }
@@ -46,7 +45,28 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_reservations) {
+            this.setTitle(R.string.action_reservations);
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            Fragment fragment = new ReservationFragment();
+            fragmentTransaction.add(R.id.fragmentParentViewGroup, fragment);
+            fragmentTransaction.commit();
+            return true;
+        }
+
+        else if (id == R.id.action_arrivals) {
+            this.setTitle(R.string.action_arrivals);
+            return true;
+        }
+
+        else if (id == R.id.action_departures) {
+            this.setTitle(R.string.action_departures);
+            return true;
+        }
+
+        else if (id == R.id.action_tracker) {
+            this.setTitle(R.string.action_tracker);
             return true;
         }
 

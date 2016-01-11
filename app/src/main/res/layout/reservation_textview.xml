@@ -7,21 +7,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Customer Name"
-            android:id="@+id/textView_name" />
+            android:id="@+id/textView_name"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp" android:textColor="#ffffff"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Package"
-            android:id="@+id/textView_package" android:layout_toRightOf="@+id/textView_name"/>
+            android:id="@+id/textView_package"
+            android:layout_above="@+id/textView_arrival" android:layout_alignParentEnd="true"
+            android:layout_marginEnd="53dp" android:textColor="#ffffff"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Arrival Date"
-            android:id="@+id/textView_arrival" android:layout_below="@+id/textView_name"/>
+            android:id="@+id/textView_arrival"
+            android:layout_below="@+id/textView_name" android:layout_alignStart="@+id/textView_name"
+            android:layout_marginTop="22dp" android:clickable="true" android:elegantTextHeight="false"
+            android:textColor="#ffffff"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Number"
-            android:id="@+id/textView_number" android:layout_below="@+id/textView_package"
-            android:layout_toRightOf="@+id/textView_name"/>
+            android:id="@+id/textView_number"
+            android:layout_alignTop="@+id/textView_arrival" android:layout_alignStart="@+id/textView_package"
+            android:textColor="#ffffff"/>
 </RelativeLayout>
