@@ -4,9 +4,20 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent" android:contextClickable="true">
 
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content" android:padding="10dp"
+              android:text="@string/some_date" android:textSize="20sp" />-->
+
+    <EditText android:id="@+id/myFilter" android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:ems="10"
+              android:hint="@string/some_hint">
+        <requestFocus />
+    </EditText>
+
+
     <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/listView_reservation" android:background="#010101" android:divider="@android:color/white"
-            android:dividerHeight="@dimen/abc_edit_text_inset_horizontal_material"/>
+            android:id="@+id/listView_reservation" android:background="#ffffff" android:divider="@color/material_grey_300"
+            android:dividerHeight="@dimen/abc_control_inset_material"/>
 </LinearLayout>

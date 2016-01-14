@@ -5,4 +5,10 @@
     <string name="action_arrivals">Arrivals</string>
     <string name="action_departures">Departures</string>
     <string name="action_tracker">Tracker</string>
+    <string name="some_date">Display and Filter Reservation!</string>
+    <string name="some_hint">Type here to filter&#8230;</string>
+    <string name="rerser_package">Package</string>
+    <string name="reser_number">Number</string>
+    <string name="arrival_date">Arrival Date</string>
+    <string name="customer_name">Customer Name</string>
 </resources>
