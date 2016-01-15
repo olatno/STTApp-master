@@ -19,5 +19,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/listView_reservation" android:background="#ffffff" android:divider="@color/material_grey_300"
-            android:dividerHeight="@dimen/abc_control_inset_material"/>
+            android:dividerHeight="1dp"/>
 </LinearLayout>

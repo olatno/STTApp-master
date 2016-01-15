@@ -7,8 +7,10 @@
             android:layout_height="wrap_content"
             android:text="@string/customer_name"
             android:id="@+id/textView_name"
-            android:layout_marginStart="24dp" android:textColor="#535353" android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" android:layout_marginTop="12dp"/>
+            android:layout_marginStart="30dp" android:textColor="#535353" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="230dp"
+            android:layout_weight="1" android:layout_marginTop="12dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -16,12 +18,12 @@
             android:id="@+id/textView_package"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="53dp" android:textColor="#535353"
-            android:layout_alignBottom="@+id/textView_name" />
+            android:layout_weight="1" android:layout_alignBottom="@+id/textView_name" />
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/arrival_date"
-            android:id="@+id/textView_arrival"
+            android:id="@+id/textView_arrival" android:layout_weight="1"
             android:clickable="true" android:elegantTextHeight="false"
             android:textColor="#535353" android:layout_below="@+id/textView_name"
             android:layout_alignStart="@+id/textView_name" android:layout_marginBottom="12dp"/>
@@ -30,6 +32,6 @@
             android:layout_height="wrap_content"
             android:text="@string/reser_number"
             android:id="@+id/textView_number"
-            android:textColor="#535353"
+            android:textColor="#535353" android:layout_weight="1"
             android:layout_below="@+id/textView_package" android:layout_alignStart="@+id/textView_package"/>
 </RelativeLayout>
