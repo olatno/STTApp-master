@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             Fragment fragment = new ReservationFragment();
-            fragmentTransaction.add(R.id.fragmentParentViewGroup, fragment);
+            fragmentTransaction.replace(R.id.fragmentParentViewGroup, fragment);
             fragmentTransaction.commit();
             return true;
         }
