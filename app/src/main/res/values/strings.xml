@@ -11,4 +11,8 @@
     <string name="reser_number">Number</string>
     <string name="arrival_date">Arrival Date</string>
     <string name="customer_name">Customer Name</string>
+    <string name="topleft">very very very very very very very very very very very text text text</string>
+    <string name="topright">Date date arrival</string>
+    <string name="bottonleft">Package</string>
+    <string name="bottomright">Number</string>
 </resources>
