@@ -7,6 +7,10 @@ public class ReservationArrival {
 
     String name;
     String arriDate;
+    String reservationDate;
+    String mobileNumber;
+    String email;
+    String channel;
     String packageBooked;
     String numberReversed;
 
@@ -42,5 +46,37 @@ public class ReservationArrival {
 
     public void setNumberReversed(String numberReversed) {
         this.numberReversed = numberReversed;
+    }
+
+    public String getReservationDate() {
+        return reservationDate;
+    }
+
+    public void setReservationDate(String reservationDate) {
+        this.reservationDate = reservationDate;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getChannel() {
+        return channel;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
     }
 }

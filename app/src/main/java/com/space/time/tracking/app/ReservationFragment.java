@@ -217,7 +217,7 @@ public class ReservationFragment extends Fragment {
                         ArrayList<ReservationArrival> reservationItems = new ArrayList<>();
                         for(int i = 0, l = originalList.size();  i < l; i++){
                             ReservationArrival reservationArrival = originalList.get(i);
-                            if(reservationArrival.toString().contains(constraint)){
+                            if(reservationArrival.getArriDate().toString().contains(constraint)){
                                 reservationItems.add(reservationArrival);
                             }
 

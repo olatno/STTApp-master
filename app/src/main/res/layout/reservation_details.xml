@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/name_reser_grid">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name key"
+                android:id="@+id/name_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name value"
+                android:id="@+id/name_value"/>
+    </GridLayout>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/arrival_reser_grid" android:layout_marginTop="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="arrival key"
+                android:id="@+id/arrival_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="arrival value"
+                android:id="@+id/arrival_value"/>
+    </GridLayout>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/reserdate_reser_grid" android:layout_marginTop="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reservation date key"
+                android:id="@+id/reservation_date_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reservation date value"
+                android:id="@+id/reservation_date_value"/>
+    </GridLayout>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/telephone_grid" android:layout_marginTop="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="telephone key"
+                android:id="@+id/telephone_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="telephone value"
+                android:id="@+id/telephone_value"/>
+    </GridLayout>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/email_grid" android:layout_marginTop="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email key"
+                android:id="@+id/email_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email value"
+                android:id="@+id/email_value"/>
+    </GridLayout>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/package_grid" android:layout_marginTop="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="package key"
+                android:id="@+id/package_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="package value"
+                android:id="@+id/package_value"/>
+    </GridLayout>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/number_grid" android:layout_marginTop="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="number key"
+                android:id="@+id/number_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="number value"
+                android:id="@+id/number_value"/>
+    </GridLayout>
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
+            android:orientation="horizontal" android:id="@+id/channel_grid" android:layout_marginTop="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="channel key"
+                android:id="@+id/channel_key"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="channel value"
+                android:id="@+id/channel_value"/>
+    </GridLayout>
+</LinearLayout>
