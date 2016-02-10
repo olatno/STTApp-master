@@ -15,4 +15,9 @@
     <string name="topright">Date date arrival</string>
     <string name="bottonleft">Package</string>
     <string name="bottomright">Number</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="email">Email</string>
+    <string name="channel">Channel</string>
+    <string name="details">Details</string>
 </resources>

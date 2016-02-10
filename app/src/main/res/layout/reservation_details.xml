@@ -2,133 +2,253 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/name_reser_grid">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="name key"
-                android:id="@+id/name_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="name value"
-                android:id="@+id/name_value"/>
-    </GridLayout>
+              android:layout_height="match_parent" android:weightSum="1">
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/arrival_reser_grid" android:layout_marginTop="20dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="arrival key"
-                android:id="@+id/arrival_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="arrival value"
-                android:id="@+id/arrival_value"/>
-    </GridLayout>
+<!--
+    <TableLayout
+            android:layout_width="337dp"
+            android:layout_height="342dp"
+            android:background="@android:color/white"
+            android:id="@+id/reservation_details_main" android:baselineAligned="false"
+            android:layout_marginTop="40dp" android:layout_marginLeft="20dp"
+            android:layout_weight="0.4" android:stretchColumns="0.5">
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/name_row" android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/name_key" android:textAlignment="textStart"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name Value"
+                    android:id="@+id/name_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/arrival_reser_row"
+                android:layout_marginTop="30dp" android:layout_marginLeft="40dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival Kay"
+                    android:id="@+id/arrival_key"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival Value"
+                    android:id="@+id/arrival_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/reserdate_reser_grid" android:layout_marginTop="20dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="reservation date key"
-                android:id="@+id/reservation_date_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="reservation date value"
-                android:id="@+id/reservation_date_value"/>
-    </GridLayout>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/reserdate_reser_row"
+                android:layout_marginTop="30dp" android:layout_marginLeft="40dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="reservation date"
+                    android:id="@+id/reservation_date_key" android:singleLine="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="reservation date value"
+                    android:id="@+id/reservation_date_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/telephone_grid" android:layout_marginTop="20dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="telephone key"
-                android:id="@+id/telephone_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="telephone value"
-                android:id="@+id/telephone_value"/>
-    </GridLayout>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/telephone_row" android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="telephone"
+                    android:id="@+id/telephone_key" android:singleLine="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="telephone value"
+                    android:id="@+id/telephone_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/email_grid" android:layout_marginTop="20dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="email key"
-                android:id="@+id/email_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="email value"
-                android:id="@+id/email_value"/>
-    </GridLayout>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/email_row" android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email key"
+                    android:id="@+id/email_key" android:singleLine="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email value"
+                    android:id="@+id/email_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/package_grid" android:layout_marginTop="20dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="package key"
-                android:id="@+id/package_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="package value"
-                android:id="@+id/package_value"/>
-    </GridLayout>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/number_row" android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="number key"
+                    android:id="@+id/number_key" android:singleLine="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="number value"
+                    android:id="@+id/number_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/number_grid" android:layout_marginTop="20dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="number key"
-                android:id="@+id/number_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="number value"
-                android:id="@+id/number_value"/>
-    </GridLayout>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/package_row" android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="package key"
+                    android:id="@+id/package_key" android:singleLine="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="reservation date value"
+                    android:id="@+id/package_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/channel_row" android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp" android:layout_marginBottom="5dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="channel key"
+                    android:id="@+id/chennal_key" android:singleLine="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="channel value"
+                    android:id="@+id/chennal_value" android:singleLine="true" android:textStyle="bold"/>
+        </TableRow>
 
-    <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:rowCount="1" android:columnCount="2"
-            android:orientation="horizontal" android:id="@+id/channel_grid" android:layout_marginTop="20dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="channel key"
-                android:id="@+id/channel_key"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="channel value"
-                android:id="@+id/channel_value"/>
-    </GridLayout>
+    </TableLayout>
+-->
+    <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:layout_marginTop="20dp" android:layout_marginLeft="20dp"
+            android:stretchColumns="1" android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+        <TableRow  android:layout_margin="0.2dp">
+            <TextView android:text="@string/customer_name"
+                      android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp" android:singleLine="false"/>
+            <TextView android:id="@+id/cust_name" android:text="@string/customer_name"
+                      android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+        <TableRow android:layout_marginBottom="0.2dp"
+            android:layout_marginRight="0.2dp"
+            android:layout_marginLeft="0.2dp">
+
+            <TextView android:text="@string/arrival_date"
+                      android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp"/>
+            <TextView android:id="@+id/arr_date"
+                      android:text="@string/arrival_date" android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="0.2dp"
+            android:layout_marginRight="0.2dp"
+            android:layout_marginLeft="0.2dp">
+
+            <TextView android:text="@string/departure_date"
+                      android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp"/>
+            <TextView android:id="@+id/dep_date"
+                      android:text="@string/departure_date" android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_marginBottom="0.2dp"
+            android:layout_marginRight="0.2dp"
+            android:layout_marginLeft="0.2dp">
+            <TextView android:text="@string/contact_number"
+                      android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp"/>
+            <TextView android:id="@+id/telephone"
+                      android:text="@string/contact_number"
+                      android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+        <TableRow
+            android:layout_marginLeft="0.2dp"
+            android:layout_marginRight="0.2dp"
+            android:layout_marginBottom="0.2dp">
+            <TextView android:text="@string/email"
+                      android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp"/>
+            <TextView android:id="@+id/email"
+                      android:text="@string/email" android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="0.2dp"
+            android:layout_marginRight="0.2dp"
+            android:layout_marginBottom="0.2dp">
+            <TextView android:text="@string/rerser_package"
+                      android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp"/>
+            <TextView android:id="@+id/package_booked"
+                      android:text="@string/rerser_package"
+                      android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+        <TableRow android:layout_marginLeft="0.2dp"
+            android:layout_marginRight="0.2dp"
+            android:layout_marginBottom="0.2dp">
+            <TextView android:text="@string/reser_number"
+                      android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp"/>
+            <TextView android:id="@+id/number_booked"
+                      android:text="@string/reser_number" android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+        <TableRow
+            android:layout_marginLeft="0.2dp"
+            android:layout_marginRight="0.2dp"
+            android:layout_marginBottom="0.2dp">
+            <TextView android:text="@string/channel"
+                      android:singleLine="true" android:background="#ffffff"
+                      android:padding="15dip" android:layout_marginRight="0.2dp"/>
+            <TextView android:id="@+id/channel" android:text="@string/channel"
+                      android:background="#ffffff"
+                      android:padding="15dip"
+                android:singleLine="true" />
+        </TableRow>
+    </TableLayout>
+
 </LinearLayout>

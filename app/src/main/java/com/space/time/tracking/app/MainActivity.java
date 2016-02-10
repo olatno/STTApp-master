@@ -56,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
         else if (id == R.id.action_arrivals) {
             this.setTitle(R.string.action_arrivals);
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            Fragment fragment = new ReservationDetailsFragment();
+            fragmentTransaction.replace(R.id.fragmentParentViewGroup, fragment);
+            fragmentTransaction.commit();
             return true;
         }
 

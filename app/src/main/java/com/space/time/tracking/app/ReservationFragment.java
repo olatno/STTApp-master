@@ -1,8 +1,6 @@
 package com.space.time.tracking.app;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.ProgressDialog;
+import android.app.*;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,13 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import com.space.time.android.tracker.bean.ReservationArrival;
-import com.space.time.tracking.util.JsonStringUtil;
+import com.space.time.tracking.util.GenericAppUtil;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -55,8 +54,8 @@ public class ReservationFragment extends Fragment {
         private WeakReference<ReservationFragment> fragmentWeakRef;
         Activity activity;
         ProgressDialog pd;
-        final String url = "http://192.168.1.2:8080/tracker/json/reservation/all";
-        //final String url = "http:// 172.17.240.155:8080/tracker/json/reservation/all";
+        //final String url = "http://192.168.1.2:8080/tracker/json/reservation/all";
+        final String url = "http://172.17.240.118:8080/tracker/json/reservation/all";
 
         private ReservationAsyncTask(ReservationFragment reservationFragment) {
 
@@ -75,7 +74,7 @@ public class ReservationFragment extends Fragment {
         @Override
         protected String doInBackground(String... params) {
 
-            return JsonStringUtil.requestContent(url);
+            return GenericAppUtil.requestContent(url);
         }
 
         @Override
@@ -89,16 +88,35 @@ public class ReservationFragment extends Fragment {
                     ReservationArrival reservationArrival;
                     for(int i = 0; i < items.length(); i++){
                         JSONObject reserObject = items.getJSONObject(i);
+
                         reservationArrival = new ReservationArrival();
+
+                        StringBuilder builder = new StringBuilder();
+                        builder.append(reserObject.getJSONObject("arrivalDate").getString("dayOfMonth"));
+                        builder.append("-");
+                        builder.append(reserObject.getJSONObject("arrivalDate").getString("monthValue"));
+                        builder.append("-");
+                        builder.append(reserObject.getJSONObject("arrivalDate").getString("year"));
+
+                        String numberOfDays = reserObject.getJSONObject("rateCode").getString("days");
 
                         reservationArrival.setName(reserObject.getJSONObject("customer").getString("firstName")
                                 +" "+ reserObject.getJSONObject("customer").getString("lastName"));
-                        reservationArrival.setArriDate(reserObject.getJSONObject("arrivalDate").getString("dayOfMonth")
+                        /*reservationArrival.setArriDate(reserObject.getJSONObject("arrivalDate").getString("dayOfMonth")
                                 +"-"+reserObject.getJSONObject("arrivalDate").getString("monthValue")
-                                +"-"+reserObject.getJSONObject("arrivalDate").getString("year"));
+                                +"-"+reserObject.getJSONObject("arrivalDate").getString("year"));*/
+                        reservationArrival.setArriDate(builder.toString());
                         reservationArrival.setPackageBooked(reserObject.getJSONObject("rateCode")
                                 .getString("rateName"));
+                        reservationArrival.setNumberOfDays(numberOfDays);
+                        reservationArrival.setChannel(reserObject.getJSONObject("rateCode").getString("channel"));
+                        reservationArrival.setEmail(reserObject.getJSONObject("customer").getString("email"));
+                        reservationArrival.setMobileNumber(reserObject.getJSONObject("customer").getString("mobile"));
+                        reservationArrival.setReservationDate(reserObject.getJSONObject("reservationDate").getString("dayOfMonth")
+                                +"-"+reserObject.getJSONObject("reservationDate").getString("monthValue")
+                                +"-"+reserObject.getJSONObject("reservationDate").getString("year"));
                         reservationArrival.setNumberReversed(reserObject.getString("numberReserved"));
+                        reservationArrival.setDepatcherDate(GenericAppUtil.calculateDeparture(numberOfDays, builder.toString()));
                         reservation.add(reservationArrival);
                     }
 
@@ -118,8 +136,29 @@ public class ReservationFragment extends Fragment {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                             //when clicked, show toast with TextView text
-                            ReservationArrival reservationArrival1 = (ReservationArrival)parent.getItemAtPosition(position);
-                            Toast.makeText(getContext(), reservationArrival1.getName(), Toast.LENGTH_SHORT).show();
+                            ReservationArrival reservationDetails = (ReservationArrival)parent.getItemAtPosition(position);
+                            Bundle args = new Bundle();
+                            List<String> arrayList = new ArrayList<String>();
+                            arrayList.add(reservationDetails.getName());
+                            arrayList.add(GenericAppUtil.uKLocalDate(reservationDetails.getArriDate()));
+                            arrayList.add(reservationDetails.getDepatcherDate());
+                            arrayList.add(reservationDetails.getMobileNumber());
+                            arrayList.add(reservationDetails.getEmail());
+                            arrayList.add(reservationDetails.getPackageBooked());
+                            arrayList.add(reservationDetails.getNumberReversed());
+                            arrayList.add(reservationDetails.getChannel());
+                            args.putStringArrayList("reserDetails", (ArrayList<String>) arrayList);
+                            ReservationDetailsFragment detailsFragment = new ReservationDetailsFragment ();
+                            detailsFragment.setArguments(args);
+
+                            getActivity().setTitle(R.string.action_reservations);
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                            fragmentTransaction.replace(R.id.fragmentParentViewGroup, detailsFragment);
+                            fragmentTransaction.commit();
+
+                            Toast.makeText(getContext(), reservationDetails.getName(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -200,7 +239,7 @@ public class ReservationFragment extends Fragment {
                 }
                 // Populate the data into the template view using the data object
                 viewHolder.name.setText(reservationArrival.getName());
-                viewHolder.date.setText(reservationArrival.getArriDate());
+                viewHolder.date.setText(GenericAppUtil.uKLocalDate(reservationArrival.getArriDate()));
                 viewHolder.package_name.setText(reservationArrival.getPackageBooked());
                 viewHolder.numbers.setText(reservationArrival.getNumberReversed());
                 // Return the completed view to render on screen

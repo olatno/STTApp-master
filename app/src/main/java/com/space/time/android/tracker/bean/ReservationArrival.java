@@ -13,6 +13,8 @@ public class ReservationArrival {
     String channel;
     String packageBooked;
     String numberReversed;
+    String numberOfDays;
+    String depatcherDate;
 
     public ReservationArrival(){}
 
@@ -78,5 +80,21 @@ public class ReservationArrival {
 
     public void setChannel(String channel) {
         this.channel = channel;
+    }
+
+    public String getNumberOfDays() {
+        return numberOfDays;
+    }
+
+    public void setNumberOfDays(String numberOfDays) {
+        this.numberOfDays = numberOfDays;
+    }
+
+    public String getDepatcherDate() {
+        return depatcherDate;
+    }
+
+    public void setDepatcherDate(String depatcherDate) {
+        this.depatcherDate = depatcherDate;
     }
 }
