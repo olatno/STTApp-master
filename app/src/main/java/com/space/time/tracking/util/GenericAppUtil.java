@@ -94,7 +94,7 @@ public class GenericAppUtil {
             }
             else{
                 builder.append(strings[i]);
-                if(i < 2)
+                if(i < strings.length - 1)
                     builder.append("-");
             }
         }
